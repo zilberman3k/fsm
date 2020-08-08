@@ -1,0 +1,20 @@
+{
+  "name": "fsm",
+  "version": "1.0.0",
+  "description": "fsm exercise",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm install && cross-env npm run _serverinit && npm run _clientinit",
+    "start": "cross-env npm run _serverstart & npm run _clientstart",
+    "_serverinit": "cd server && npm install",
+    "_clientinit": "cd client && npm install",
+    "_serverstart": "cd server && npm start",
+    "_clientstart": "cd client && npm start"
+  },
+  "keywords": [],
+  "author": "Niv Zilberman",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.2"
+  }
+}

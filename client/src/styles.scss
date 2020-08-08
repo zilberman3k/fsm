@@ -1,0 +1,81 @@
+html {
+  background: linear-gradient(#0037ff40, #fff);
+  width: 170px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    align-self: center;
+    padding: 2rem;
+  }
+
+  .traffic-light {
+    background: #222;
+    width: 170px;
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 2rem;
+
+    .red {
+      background: transparent;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      left: 35px;
+
+      &.on {
+        background: red;
+      }
+    }
+
+    .yellow {
+      background: transparent;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 145px;
+      left: 35px;
+
+      &.on, &.blink {
+        background: yellow;
+      }
+
+      &.blink {
+        animation: blink-animation 1s steps(2, start) infinite;
+      }
+    }
+
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    .green {
+      background: transparent;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 270px;
+      left: 35px;
+
+      &.on {
+        background: lime;
+      }
+    }
+
+
+  }
+}
+
