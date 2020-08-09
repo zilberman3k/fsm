@@ -27,7 +27,7 @@ const wrapReducer = (spec) => (currentState, event) => {
         throw new Error(`no transition for event ${event} in state ${currentState}`);
     }
 
-    spec.states[nextState].onEnter && spec.states[nextState].onEnter(post);
+    spec.states[nextState].onEnter && spec.states[nextState].onEnter(post); // onEnter hook
 
     return nextState;
 };
